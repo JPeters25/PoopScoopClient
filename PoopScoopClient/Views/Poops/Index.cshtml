@@ -1,0 +1,17 @@
+<ol>
+@foreach (Poop poop in Model)
+{
+    <ul>
+        <li>ID: @poop.PoopId</li>
+        <li>Consistency: @poop.Consistency</li>
+        <li>Volume: @poop.Volume</li>
+        <li>@Html.ActionLink($"{poop.Color}", "Color", new { color = poop.Color})</li>
+        <li>Content: @poop.Content</li>
+        <li>Coating: @poop.Coating</li>
+        <li>Grade: @poop.Grade</li>
+        <li>Problem: @poop.Problem</li>
+        <li>Solution: @poop.Solution</li>
+        <br>
+    </ul>
+}
+</ol>
