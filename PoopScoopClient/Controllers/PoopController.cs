@@ -39,6 +39,20 @@ namespace PoopScoopClient.Controllers
       return RedirectToAction("Index");
     }
 
+     public IActionResult Content(string content)
+    {
+      var poopContent = Poop.GetContent(content);
+      return View(poopContent);
+    }
+
+    [HttpPost]
+    public IActionResult Content(Poop poop)
+    {
+      Poop.Post(poop);
+      return RedirectToAction("Index");
+    }
+
+
 
 
     public IActionResult Details(int id)

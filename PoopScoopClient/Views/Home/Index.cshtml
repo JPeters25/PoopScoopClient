@@ -1,9 +1,84 @@
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <div id="Header">
+    <h1 id="HeaderText">Welcome</h1>
+    <h3> Check whats wrong with your dogs poop here</h3>
+    </div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img class="logo" src='img/Poop Emoji.png' width="100px"/></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" @Html.ActionLink("Home","Index","Home")</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"@Html.ActionLink("Poops","Index","Poops")</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="row">
+  <div class="card" id=SlideCard>
+    <div class="card-title">Poo Charts:</div>
+    <div class="card-body">
+      <div id=SlideShow>
+        <img class="mainSlides" src='img/poop.png' width= "600px" height="100px" alt="image of a bakery"/>
+        <img class="mainSlides" src='img/poopchart.png' width="600px" alt="image of a variety of bread"/>
+        <img class="mainSlides" src='img/stoolchart.jpg' width="600px" alt="image of a variety of bread"/>
+        <img class="mainSlides" src='img/content.png' width="600px" alt="image of a variety of bread"/>
+        <div class="w3-section">
+          <button class="navButton" onclick="plusDivs(-1)" >Next<</button>
+          <button class="navButton" onclick="plusDivs(1)">Next ❯</button>
+        </div>
+        <button class="numButton" onclick="currentDiv(1)">1</button> 
+        <button class="numButton" onclick="currentDiv(2)">2</button> 
+        <button class="numButton" onclick="currentDiv(2)">3</button> 
+        <button class="numButton" onclick="currentDiv(4)">4</button> 
+        <button class="numButton" onclick="currentDiv(5)">5</button>
+      </div>
+
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) 
+    {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) 
+    {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) 
+    {
+      var i;
+      var x = document.getElementsByClassName("mainSlides");
+      var dots = document.getElementsByClassName("demo");
+
+      if (n > x.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = x.length}
+          for (i = 0; i < x.length; i++)
+            {
+             x[i].style.display = "none";  
+            }
+          for (i = 0; i < dots.length; i++) 
+            {
+              dots[i].className = dots[i].className.replace(" w3-red", "");
+            }
+          x[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " w3-red";
+      }
+      </script>
+    </div>
 </div>
-
-<h1>All Poops:</h1>
-
-
-@Html.ActionLink("See All Poops", "Index", "Poops")
+   

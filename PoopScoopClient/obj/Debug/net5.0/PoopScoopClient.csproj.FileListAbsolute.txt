@@ -147,3 +147,4 @@ C:\Users\jpete\OneDrive\Desktop\Coding\PoopScoopClient.Solution\PoopScoopClient\
 C:\Users\jpete\OneDrive\Desktop\Coding\PoopScoopClient.Solution\PoopScoopClient\obj\Debug\net5.0\PoopScoopClient.genruntimeconfig.cache
 C:\Users\jpete\OneDrive\Desktop\Coding\PoopScoopClient.Solution\PoopScoopClient\obj\Debug\net5.0\ref\PoopScoopClient.dll
 C:\Users\jpete\OneDrive\Desktop\Coding\PoopScoopClient.Solution\PoopScoopClient\obj\Debug\net5.0\Razor\Views\Poops\Color.cshtml.g.cs
+C:\Users\jpete\OneDrive\Desktop\Coding\PoopScoopClient.Solution\PoopScoopClient\obj\Debug\net5.0\Razor\Views\Poops\Content.cshtml.g.cs

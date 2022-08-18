@@ -39,6 +39,17 @@ namespace PoopScoopClient.Models
       return poopList;
     }
 
+    public static List<Poop> GetContent(string content)
+    {
+      var apiCallTask = ApiHelper.GetContent(content);
+      var result = apiCallTask.Result;
+
+      JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
+      List<Poop> poopList = JsonConvert.DeserializeObject<List<Poop>>(jsonResponse.ToString());
+
+      return poopList;
+    }
+
     public static Poop GetDetails(int id)
     {
       var apiCallTask = ApiHelper.Get(id);

@@ -1,5 +1,70 @@
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
+@font-face{
+  font-family: Poop1;
+  src:url(../font/Turds-vppD.ttf);
+}
+
+@font-face{
+  font-family: Poop2;
+  src:url(../font/Poocorny-rvOA.ttf);
+}
+
+#Header{
+  font-family: Poop1;
+  color: #7a5901;
+  background-color: #a8a495;
+  text-align: center;
+  font-size: 72;
+  padding: 10px;
+  border-radius: 20%;
+  animation-name: color_change;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#HeaderText
+{
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #7b5804 0%,
+    #7a5901 25%,
+    #411900 50%,
+    #7f5112 75%,
+    #1d0200 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s linear infinite;
+  display: inline-block;
+ font-size: 72px;
+}
+
+#SlideCard{
+  background-color: white;
+  margin-right: 800;
+  margin: auto;
+  width:60%;
+  border: 3px solid grey;
+  padding: 10px;
+  text-align: center;
+  margin-top: 1%;
+  border-radius: 20px;
+}
+
+.card-title{
+  font-family: Poop2;
+  font-size: 48px;
+  color: #411900 50%;
+}
 
 a.navbar-brand {
   white-space: normal;
@@ -61,6 +126,12 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+  background-image: url(../img/pooBG.jpg);
+  background-size: 100%;
+  background-repeat: repeat-y;
+  background-position: center;
+  height: 150%;
+
 }
 .footer {
   position: absolute;

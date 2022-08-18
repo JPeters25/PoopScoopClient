@@ -6,7 +6,7 @@
         <li>Consistency: @poop.Consistency</li>
         <li>Volume: @poop.Volume</li>
         <li>@Html.ActionLink($"{poop.Color}", "Color", new { color = poop.Color})</li>
-        <li>Content: @poop.Content</li>
+        <li>@Html.ActionLink($"{poop.Content}", "Content", new { content = poop.Content})</li>
         <li>Coating: @poop.Coating</li>
         <li>Grade: @poop.Grade</li>
         <li>Problem: @poop.Problem</li>

@@ -24,6 +24,14 @@ namespace PoopScoopClient.Models
       return response.Content;
     }
 
+    public static async Task<string> GetContent(string content)
+    {
+      RestClient client = new RestClient("http://localhost:5000/api");
+      RestRequest request = new RestRequest($"poops?content={content}", Method.GET);
+      var response = await client.ExecuteTaskAsync(request);
+      return response.Content;
+    }
+
 
   // RestRequest request = new RestRequest($"poops?color=brown", Method.GET);
 
